@@ -10,3 +10,4 @@ A
 	 includeAction는 res req를 넘겨주는 공통점이 있다 하지만,
 	 includeAction은 a와 b를 합친다는 개념이고
 	 forward는 a를 통해 b로 이동한다는 개념이다. --%>
+	 
