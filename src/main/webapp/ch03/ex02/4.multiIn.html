@@ -1,0 +1,25 @@
+<meta charset='utf-8'/>
+<form action='4.multiOut.jsp'>
+	<fieldset>
+		<input type='checkbox' name='letter' value='politics'/>정치
+		<input type='checkbox' name='letter' value='economics'/>경제
+		<input type='checkbox' name='letter' value='culture'/>문화
+	</fieldset>
+	<!-- checkbox의 그룹은 비(非)배타적이다. -->
+	<fieldset>
+		<input type='radio' name='gender' value='male'/>남
+		<input type='radio' name='gender' value='female'/>여
+	</fieldset>
+	<!-- radio의 그룹은 배타적이다. -->
+	
+	<fieldset>
+		<select name='job' multiple>	<!-- 여러 속성을 주기위해 multiple을 사용 -->
+			<option value='developer'>개발자</option>
+			<option value='planner'>기획자</option>
+			<option value='dba'>DBA</option>
+		</select>
+	</fieldset>
+	
+	<input type='submit'/>
+</form>
+<!-- 하나의 parameter에 여러 파라미터의 value를 넣게되면 그 스트링타입은 배열화가 된다. -->
