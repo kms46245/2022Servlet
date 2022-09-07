@@ -1,9 +1,8 @@
 <%@ page language='java' contentType='text/html; charset=utf-8' pageEncoding='utf-8'%>
 A
 <%
-	RequestDispatcher dispatcher = request.getRequestDispatcher("1.b.jsp");
+	RequestDispatcher dispatcher = request.getRequestDispatcher("1.b_R.jsp");
 	dispatcher.forward(request, response);
-	
 %>
 <%-- dispatcher.forward(a.request, a.response) -> a b 서블릿이 있다고 가정했을때,
      a가 가진 request와 response를 이용해 b 서블릿으로 이어지게 만들어준다.

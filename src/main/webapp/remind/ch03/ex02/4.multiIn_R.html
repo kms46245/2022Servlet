@@ -1,0 +1,24 @@
+<meta charset='utf-8'/>
+<form action='4.multiOut_R.jsp'>
+	<!-- checkbox의 그룹은 비(非)배타적이다. -->
+	<fieldset>
+		<input type='checkbox' name='letter' value='politics'/>정치
+		<input type='checkbox' name='letter' value='economics'/>경제
+		<input type='checkbox' name='letter' value='culture'/>문화
+	</fieldset>
+	<!-- radio의 그룹은 배타적이다. -->
+	<fieldset>
+		<input type='radio' name='gender' value='male'/>남성
+		<input type='radio' name='gender' value='female'/>여성
+	</fieldset>
+	
+	<fieldset>
+		<select name='job' multiple>	<!-- 여러 속성을 주기위해 multiple을 사용 -->
+			<option value='developer'>개발자</option>
+			<option value='planner'>기획자</option>
+			<option value='dba'>DBA</option>
+		</select>
+	</fieldset>
+	
+	<input type='submit'/>
+</form>
