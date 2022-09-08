@@ -4,3 +4,6 @@
 	<input type='radio' name='site' value='2'/> 다음
 	<input type='submit'/>
 </form>
+
+<% String error = request.getParameter("errorName"); %>
+<%= error != null ? error : "" %>

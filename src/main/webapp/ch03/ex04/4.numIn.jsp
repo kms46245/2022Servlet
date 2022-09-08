@@ -3,8 +3,13 @@
 	<input type='number' name='num'/>
 	<input type='submit'/>
 </form>
-<%
+<%-- <%
 	if(request.getQueryString() != null) {
 %>
 	한글
 <% } %>
+ --%>
+<%
+	String msg = request.getParameter("msg");
+%>
+<%= msg != null ? msg : ""%>

@@ -1,20 +1,21 @@
 <%@ page language='java' contentType='text/html; charset=utf-8' pageEncoding='utf-8'%>
 <%@ taglib prefix='c' uri="http://java.sun.com/jstl/core" %>
 <%	
-	String numStr = request.getParameter("site");
-	int site = Integer.parseInt(numStr);
-%>
-	<%= site %>
-<%	
-	if(site == 1) {
-%>
-	<c:redirect url='http://www.naver.com'/>
-<% 	
-	} else if(site == 2) {
-%>
-	<c:redirect url='http://www.daum.net'/>
-<% } %>
+	String siteNumStr = request.getParameter("site");
+	int siteNum = 0;	
 
+	if(siteNumStr != null) {
+		siteNum = Integer.parseInt(siteNumStr);
+		if(siteNum == 1) {
+%>
+			<c:redirect url='http://www.naver.com'/>
+	<% 	} else if(siteNum == 2) {	%>
+			<c:redirect url='http://www.daum.net'/>
+	<%	}
+	} else {
+%>
+	<c:redirect url='siteIn.jsp?errorName=emptyValueError'/>	
+<% }%>
 
 <!-- 과제] 
 다음 또는 네이버를 선택하고, 폼을 제출한다.
