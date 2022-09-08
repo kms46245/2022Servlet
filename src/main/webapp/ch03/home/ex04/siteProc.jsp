@@ -1,6 +1,7 @@
 <%@ page language='java' contentType='text/html; charset=utf-8' pageEncoding='utf-8'%>
 <%@ taglib prefix='c' uri="http://java.sun.com/jstl/core" %>
-<%	
+<!-- mine -->
+<%-- <%	
 	String siteNumStr = request.getParameter("site");
 	int siteNum = 0;	
 
@@ -15,8 +16,28 @@
 	} else {
 %>
 	<c:redirect url='siteIn.jsp?errorName=emptyValueError'/>	
-<% }%>
+<% }%> --%>
 
+<!-- receive -->
+<%
+	String site = request.getParameter("site");
+	if(site == null) site = "";
+	
+	switch(site) {
+	case "daum":
+%>
+		<c:redirect url='http://www.daum.net'/>
+<%
+	case "naver":
+%>
+		<c:redirect url='http://www.naver.com'/>
+<%
+	default:
+%>
+		<c:redirect url='siteIn.jsp?msg=Select a site.'/>
+<%
+	}
+%>
 <!-- 과제] 
 다음 또는 네이버를 선택하고, 폼을 제출한다.
 해당 사이트로 이동한다.

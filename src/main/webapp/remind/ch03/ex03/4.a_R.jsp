@@ -1,5 +1,4 @@
 <%@ page language='java' contentType='text/html; charset=utf-8' pageEncoding='utf-8'%>
-A
-<%
-	response.sendRedirect("1.b.jsp");
-%>
+A <hr>
+<jsp:include page='4.b_R.jsp'/><hr>
+A2
