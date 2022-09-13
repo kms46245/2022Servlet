@@ -4,26 +4,24 @@
 <h3>장바구니</h3>
 <%
 	Object cartObj = session.getAttribute("cart");
-	if(request.getQueryString() != null) {
-		String msg = request.getParameter("clearMsg");
-		out.println(msg);
 	
-	} else {
 		if(cartObj != null) {
 			List<String> cart = (List<String>)cartObj;
 			if(cart.size() > 0) {
 %>			
+			<form action='cartDelProc.jsp' method='post'>
 				<ul>
-<%
+<%					
 					for(String product: cart){
 %>				
-					<li><%= product %></li>
+						<li><%= product %><input type='checkbox' name=product value='<%=product%>'/></li>			
 <%
 					}
-%>
-				</ul>			
+%>					
+				</ul>
+				<button type='submit' formaction='cartDelProc.jsp'>비우기</button>
+			</form>
 <%
 			} else out.println("장바구니에 물건이 없습니다.");
 		} else out.println("장바구니가 없습니다.");
-	}
 %>

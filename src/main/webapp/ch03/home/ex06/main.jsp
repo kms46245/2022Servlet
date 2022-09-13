@@ -8,5 +8,4 @@
 	</ul>
 	<button type='submit'>담기</button>
 	<button type='submit' formaction='cartOut.jsp'>보기</button>
-	<button type='submit' formaction='cartDelProc.jsp'>장바구니 비우기</button>
 </form>
