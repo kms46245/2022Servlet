@@ -1,34 +1,18 @@
 <%@ page language='java' contentType='text/html; charset=utf-8' pageEncoding='utf-8'%>
-
-<%-- myAnswer
 <%
-	String loginMsg = request.getParameter("loginMsg");
-	
-	if(loginMsg != null) {
+	Object userId = session.getAttribute("userId");
+	if(userId == null) {	
 %>
-		<%=session.getAttribute("userId")%>님 환영합니다.
-		<a href='logout.jsp'>logout</a>
+	<a href='login_R.jsp'>로그인</a>
 <%
 	} else { 
 %>
-		<a href='login.jsp'>Login</a>
-<%
-	}
-%>
---%>
-
-<%-- receive --%>
-<%
-	Object userId = session.getAttribute("userId");
-	if(userId == null) {
-%>
-	<a href='login.jsp'>로그인</a>
-<% 	} else { %>
 	<%= userId %>님, 환영합니다. &nbsp;
-	<a href='logout.jsp'>로그아웃</a>	
+	<a href='logout_R.jsp'>로그아웃</a>
 <%
 	}
-%>	
+%>
+
 <%-- 메인에서 로그인 링크를 누르면, 로그인 폼으로 이동한다.
 	 로그인 폼에서, 아이디/비밀번호를 입력하고, 로그인 폼을 제출한다.
 	 이때, 아이디/비밀번호는 java/java 이다.
