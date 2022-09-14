@@ -5,6 +5,6 @@
 	Cookie cookie2 = new Cookie("age", "12");
 	//Object를 Cookie로 사용하기위해 serializing을 해준다.
 	
-	
-	
+	response.addCookie(cookie1);	// addCookie - 쿠키를 추가한다.(클라이언트에 저장하고 하는건 컴퓨터의 몫)
+	response.addCookie(cookie2);
 %>
