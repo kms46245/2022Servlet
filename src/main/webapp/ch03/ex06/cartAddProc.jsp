@@ -9,7 +9,7 @@
 		
 		for(String product: products)
 			cart.add(product);
-		
+
 		session.setAttribute("cart", cart);
 	}
 %>
