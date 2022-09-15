@@ -14,9 +14,9 @@
 			cookie.setMaxAge(60 * 60 * 24 * 7);
 			response.addCookie(cookie);
 		} else {
-			for(Cookie hasCookie: cookies) {
-				if(hasCookie.getName().equals("cart")) {
-					cart += hasCookie.getValue() + "/";
+			for(Cookie cookie: cookies) {
+				if(cookie.getName().equals("cart")) {
+					cart += cookie.getValue();
 				}
 			}
 			for(String product: products)

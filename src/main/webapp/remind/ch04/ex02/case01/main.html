@@ -1,0 +1,16 @@
+<meta charset='utf-8'/>
+<nav>
+	<a href='cookieGen.jsp'>생성</a>
+	<a href='cookieOut.jsp'>조회1</a>
+	<a href='sub/cookieOut.jsp'>조회2</a>
+	<a href='../case02/cookieOut.jsp'>조회3</a>
+</nav>
+
+<!--
+	- 쿠키를 골라담는다 -
+	하위 디렉토리(조회2)에서는 쿠키를 조회할 수 있지만,
+	상위 디렉토리(조회3)에서는 해당 디렉토리보다 낮은 디렉토리의 쿠키는 조회되지않는다.
+	조회 되지 않는 개념은 Domain이나 path가 다른것을 생각하면 이해하기 쉽다.
+	
+	ex) 네이버에 저장된 로그인정보가 다음에서 불러와지지 않는것
+-->

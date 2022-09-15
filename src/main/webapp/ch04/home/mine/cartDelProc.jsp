@@ -7,28 +7,21 @@
 	
 	if(cookies != null) {
 		String cart = "";
-		for(Cookie hasCookie: cookies) {
-			if(hasCookie.getName().equals("cart")) {
-				cart = hasCookie.getValue();
+		for(Cookie cookie: cookies) {
+			if(cookie.getName().equals("cart")) {
+				cart += cookie.getValue();
 			}
 		}
 	
-		if(products != null) {
-			for(String product: products) {
-				%>
-					<%=product %><br><%= cart %><br>
-				<%	
-				cart.replaceFirst(product, "");
+		if(products != null) {			
+			for(String product: products) {				
+				cart = cart.replaceFirst(product, "");
 			}
-			%>
-				<%= cart %><br>
-			<%
-
 			Cookie afterDelCookie = new Cookie("cart", cart);
 			response.addCookie(afterDelCookie);
 		} else {
 %>
-			<c:set var='msg' value='장바구니에서 뺄 물건을 선택하세요.'/>  <!-- set - attribute를 만드는 actiontag -->
+			<c:set var='msg' value='장바구니에서 뺄 물건을 선택하세요.'/>
 <%
 		}
 	} else { 
@@ -37,8 +30,7 @@
 <%
 	}
 %>
-<%--
+
 <c:redirect url='cartOut.jsp'>
 	<c:param name='msg' value='${msg}'/>
 </c:redirect>
- --%>
