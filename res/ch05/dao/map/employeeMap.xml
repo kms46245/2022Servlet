@@ -5,7 +5,7 @@
 	<select id='selectEmployee' resultType='ch05.domain.Employee'>
 		select employee_id employeeId, last_name lastName, hire_date hireDate
 		from employees
-		where employee_id = ${employeeId}
+		where employee_id = #{employeeId}
 	</select>
 	
 	<select id='selectEmployees' resultType='ch05.domain.Employee'>

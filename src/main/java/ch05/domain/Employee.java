@@ -19,18 +19,6 @@ public class Employee {
 		return hireDate;
 	}
 
-	public void setEmployeeId(int employeeId) {
-		this.employeeId = employeeId;
-	}
-
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
-
-	public void setHireDate(LocalDate hireDate) {
-		this.hireDate = hireDate;
-	}
-
 	@Override
 	public String toString() {
 		return String.format("%3d %-11s %8s", employeeId, lastName, hireDate);

@@ -5,12 +5,12 @@
 <%
 	EmployeeService employeeService = new EmployeeServiceImpl();
 %>
+
+<%= employeeService.getEmployee(100) %> <br>
+
 사번 : <%= employeeService.getEmployee(100).getEmployeeId() %> <br>
 이름 : <%= employeeService.getEmployee(100).getLastName() %>	<br>
 입사일 : <%= employeeService.getEmployee(100).getHireDate() %> <br><br>
-
-
-<%= employeeService.getEmployee(100) %> <br>
 
 <% 
 List<Employee> employees = employeeService.getEmployees();
